@@ -1,31 +1,32 @@
-vue-copy-2-clipboard
+# vue-copy-2-clipboard
 A lightweight, robust, and easy-to-use Vue 3 composable for copying text to the clipboard. Built with the Composition API, it provides a clean and reactive way to handle copy-to-clipboard functionality in your applications.
 
-🤔 Why use this package?
-While the browser's native navigator.clipboard API is powerful, this composable simplifies its use by:
+## 🤔 Why use this package?
+  While the browser's native navigator.clipboard API is powerful, this composable simplifies its use by:
 
-Handling Promises & State: It manages the async writeText promise and provides reactive states (copied, error) out of the box. You don't have to write your own try...catch blocks or manage reactive variables.
+  Handling Promises & State: It manages the async writeText promise and provides reactive states (copied, error) out of the box. You don't have to write your own try...catch blocks or manage reactive variables.
 
-Providing a Clean Interface: Abstracts the native API into a simple and intuitive useClipboard() function.
+  Providing a Clean Interface: Abstracts the native API into a simple and intuitive useClipboard() function.
 
-Encouraging Reusability: Encapsulates the core logic, making it easy to reuse across multiple components without duplication.
+  Encouraging Reusability: Encapsulates the core logic, making it easy to reuse across multiple components without duplication.
 
-📦 Installation
+## 📦 Installation
 To get started, install the package using npm:
 
-Bash
-
+### Bash
+```
 npm install @boynextcubicle/vue-copy-2-clipboard
+```
 (Note: Replace @your-username with your npm username and package scope)
 
-🚀 Usage
+## 🚀 Usage
 The composable provides a copy method to perform the copy action and exposes reactive properties (copied, error) to track the result.
 
-Basic Example
+### Basic Example
 Use the composable with a static string.
 
 Code snippet
-
+```
 <template>
   <button @click="copy">
     {{ copied ? 'Copied!' : 'Copy Text' }}
@@ -37,11 +38,13 @@ import { useClipboard } from '@your-username/vue-copy-2-clipboard';
 
 const { copy, copied } = useClipboard('Hello, Vue.js!');
 </script>
-Dynamic Example
-Use the composable with a reactive variable. The copy method will automatically use the latest value of the Ref.
+```
+
+**Dynamic Example**
+(Use the composable with a reactive variable. The copy method will automatically use the latest value of the Ref.)
 
 Code snippet
-
+```
 <template>
   <div>
     <input type="text" v-model="textToCopy" />
@@ -66,45 +69,59 @@ const { copy, copied, error } = useClipboard(textToCopy);
   margin-top: 10px;
 }
 </style>
-📋 API
+```
+
+## 📋 API
 The useClipboard composable accepts one argument and returns an object with reactive properties and methods.
 
-useClipboard(textToCopy)
-textToCopy
+`useClipboard(textToCopy)`
 
-Type: string | Ref<string>
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| `textToCopy` | `string` or `Ref<string>` | The text you want to copy to the clipboard. This can be a simple string or a reactive reference to a string. |
 
-Description: The text you want to copy to the clipboard. This can be a simple string or a reactive reference to a string.
+<br>
 
-Returns:
+**Returns:**
+
 The function returns an object with the following properties and methods:
 
-Property	Type	Description
-copy	Function	A function to trigger the copy operation. This is an async function that returns a Promise.
-copied	Ref<boolean>	A reactive boolean that is true if the copy operation was successful. It resets to false on a new copy call.
-isSupported	boolean	A boolean that is true if the user's browser supports the Clipboard API.
-error	Ref<Error | null>	A reactive reference that holds any error that occurred during the copy operation.
+| Property | Type | Description |
+| :--- | :--- | :--- |
+| `copy` | `Function` | A function to trigger the copy operation. This is an `async` function that returns a Promise. |
+| `copied` | `Ref<boolean>` | A reactive boolean that is `true` if the copy operation was successful. It resets to `false` on a new copy call. |
+| `isSupported` | `boolean` | A boolean that is `true` if the user's browser supports the Clipboard API. |
+| `error` | `Ref<Error \| null>` | A reactive reference that holds any error that occurred during the copy operation. |
 
-Export to Sheets
-🧑‍💻 Contributing
+## 🧑‍💻 Contributing
 Contributions are welcome! If you have suggestions for new features, bug fixes, or improvements, please feel free to open an issue or a pull request on the GitHub repository.
 
-Fork the repository.
+### Fork the repository.
 
-Clone your forked repository: git clone https://github.com/saurav0896/vue-copy-2-clipboard.git
+Clone your forked repository: 
+```
+git clone https://github.com/saurav0896/vue-copy-2-clipboard.git
+```
 
-Install dependencies: npm install
+### Install dependencies: 
+```
+npm install
+```
 
 Make your changes.
 
-Build the package: npm run build
+### Build the package:
+```
+npm run build
+```
 
 Commit your changes and push to your fork.
 
 Create a Pull Request.
 
-📝 License
+### 📝 License
 This project is licensed under the MIT License.
 
-Author: Your Name
-Repository: https://github.com/saurav0896/vue-copy-2-clipboard
+**Author:** Saurav Singh
+<br>
+**Repository:** https://github.com/saurav0896/vue-copy-2-clipboard
