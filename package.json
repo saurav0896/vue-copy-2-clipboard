@@ -1,6 +1,6 @@
 {
   "name": "vue-copy-2-clipboard",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple Vue 3 composable for copying text to the clipboard.",
   "main": "dist/vue-copy-2-clipboard.umd.js",
   "module": "dist/vue-copy-2-clipboard.es.js",
@@ -31,7 +31,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/saurav0896/vue-use-clipboard.git"
+    "url": "git+https://github.com/saurav0896/vue-copy-2-clipboard.git"
   },
   "dependencies": {
     "vue": "^3.0.0"
