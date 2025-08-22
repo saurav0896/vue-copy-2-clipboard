@@ -1,4 +1,4 @@
-import { ref } from 'vue';
+import { ref, unref } from 'vue';
 
 /**
  * A composable function to easily copy text to the clipboard.
@@ -16,7 +16,7 @@ export function useClipboard(textToCopy) {
     }
 
     try {
-      await navigator.clipboard.writeText(textToCopy);
+      await navigator.clipboard.writeText(unref(textToCopy));
       copied.value = true;
       error.value = null;
     } catch (err) {

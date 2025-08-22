@@ -15,9 +15,8 @@ To get started, install the package using npm:
 
 ### Bash
 ```
-npm install @boynextcubicle/vue-copy-2-clipboard
+npm install vue-copy-2-clipboard
 ```
-(Note: Replace @your-username with your npm username and package scope)
 
 ## 🚀 Usage
 The composable provides a copy method to perform the copy action and exposes reactive properties (copied, error) to track the result.
@@ -34,7 +33,7 @@ Code snippet
 </template>
 
 <script setup>
-import { useClipboard } from '@your-username/vue-copy-2-clipboard';
+import { useClipboard } from 'vue-copy-2-clipboard';
 
 const { copy, copied } = useClipboard('Hello, Vue.js!');
 </script>
@@ -57,7 +56,7 @@ Code snippet
 
 <script setup>
 import { ref } from 'vue';
-import { useClipboard } from '@your-username/vue-copy-2-clipboard';
+import { useClipboard } from 'vue-copy-2-clipboard';
 
 const textToCopy = ref('Initial Text');
 const { copy, copied, error } = useClipboard(textToCopy);
