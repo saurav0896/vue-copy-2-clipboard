@@ -1,4 +1,8 @@
 # vue-copy-2-clipboard
+![npm](https://img.shields.io/npm/v/vue-copy-2-clipboard)
+![license](https://img.shields.io/github/license/saurav0896/vue-copy-2-clipboard)
+
+
 A lightweight, robust, and easy-to-use Vue 3 composable for copying text to the clipboard. Built with the Composition API, it provides a clean and reactive way to handle copy-to-clipboard functionality in your applications.
 
 ## 🤔 Why use this package?
