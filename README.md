@@ -14,7 +14,7 @@ A lightweight, robust, and easy-to-use Vue 3 composable for copying text to the 
 To get started, install the package using npm:
 
 ### Bash
-```
+```bash
 npm install vue-copy-2-clipboard
 ```
 
@@ -25,7 +25,7 @@ The composable provides a copy method to perform the copy action and exposes rea
 Use the composable with a static string.
 
 Code snippet
-```
+```vue
 <template>
   <button @click="copy">
     {{ copied ? 'Copied!' : 'Copy Text' }}
@@ -43,7 +43,7 @@ const { copy, copied } = useClipboard('Hello, Vue.js!');
 (Use the composable with a reactive variable. The copy method will automatically use the latest value of the Ref.)
 
 Code snippet
-```
+```vue
 <template>
   <div>
     <input type="text" v-model="textToCopy" />
@@ -98,19 +98,19 @@ Contributions are welcome! If you have suggestions for new features, bug fixes, 
 ### Fork the repository.
 
 Clone your forked repository: 
-```
+```git
 git clone https://github.com/saurav0896/vue-copy-2-clipboard.git
 ```
 
 ### Install dependencies: 
-```
+```bash
 npm install
 ```
 
 Make your changes.
 
 ### Build the package:
-```
+```bash
 npm run build
 ```
 
